@@ -1,9 +1,10 @@
 let mysql=require("mysql");
 let connData={
-  host:"127.0.0.1",
+  host:"localhost",
   user:"root",
   password:"",
-  database:"employeedb"
+  database:"employeedb",
+  port:"3000"
 };
 
 function getConnection(){

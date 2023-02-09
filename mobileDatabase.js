@@ -34,7 +34,7 @@ client.connect(function(res,error){
 });
 
 app.get("/svr/resetData",function(req,res){
-  console.log(`in Deletion section`);
+  console.log("in Deletion section");
   //if we use delete for reset new id gonna start from the previous id
   // let sql="DELETE FROM mobiletbl ";
    //if we use delete for reset new id gonna start from start id
@@ -47,9 +47,9 @@ app.get("/svr/resetData",function(req,res){
     }
     else{
       console.log(`Deletion Success.Deleted ${result.affectedRows} rows`);
-      let {mobileData}=require("./mobData.js");
-      // console.log("employeeData",employeeData);
-      let arr=mobileData.map(st=>[
+      let {mobileDataJson}=require("./mobData.js");
+      console.log("mobileData",mobileDataJson);
+      let arr=mobileDataJson.map(st=>[
         st.name,
         st.price,
         st.brand,

@@ -14,7 +14,7 @@ app.use(function(req,res,next){
   );
   next();
 });
-var port=process.env.PORT||2410;
+var port=process.env.PORT||3306;
 app.listen(port,()=>console.log(`Node app Listening on port ${port}`));
 let {getConnection}=require("./mobileDatabase.js");
 
